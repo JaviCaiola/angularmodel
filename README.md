@@ -1,5 +1,6 @@
 # Angularbocetmodel
 
+Maquetado de Angular con la libreria Angular Material en conjunto con Bootstrap 5
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
 ## Development server
