@@ -1,8 +1,10 @@
-<section class="h-100 w-100 sect-scroll bg-success"></section>
-<section class="h-400 w-100 sect-scroll bg-info medio">
-    <video #myVideo autoplay loop muted>
-        <source src="../../../../assets/videos/Videoanimacion.mp4" type="video/mp4">
-    </video>
-</section>
-<section class="h-100 w-100 sect-scroll bg-secondary"></section>
-<section class="h-100 w-100 sect-scroll bg-dark"></section>
+<section class="h-100 w-100 sect-scroll bg-success primero"></section>
+<ng-container #videoContainer>
+    <section class="h-400 w-100 sect-scroll medio" [ngClass]="{ 'sticky-video': isVideoInView }">
+        <video #myVideo id="videoanimate" autoplay loop muted>
+            <source src="../../../../assets/videos/Videoanimacion.mp4" type="video/mp4">
+        </video>
+    </section>
+</ng-container>
+<section class="h-100 w-100 sect-scroll bg-secondary tercero"></section>
+<section class="h-100 w-100 sect-scroll bg-dark cuarto"></section>

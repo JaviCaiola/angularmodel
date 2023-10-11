@@ -1,4 +1,5 @@
 import { Component, HostListener, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { IntersectionObserverDirective } from 'ngx-intersection-observer';
 
 @Component({
   selector: 'app-scrollfixed',
@@ -6,7 +7,7 @@ import { Component, HostListener, ElementRef, Renderer2, ViewChild } from '@angu
   styleUrls: ['./scrollfixed.component.css']
 })
 export class ScrollfixedComponent {
-  @ViewChild('myVideo', { static: true }) myVideo: ElementRef | any;
+  /* @ViewChild('myVideo', { static: true }) myVideo: ElementRef | any;
 
   constructor(private renderer: Renderer2) { }
 
@@ -23,5 +24,29 @@ export class ScrollfixedComponent {
         this.myVideo.nativeElement.pause();
       }
     }
+  } */
+  @ViewChild('videoContainer') videoContainer: ElementRef | any;
+  @ViewChild('myVideo') myVideo: ElementRef | any;
+
+  isVideoInView = false;
+
+  constructor() { }
+
+  ngAfterViewInit() {
+    const options = {
+      threshold: 1.0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.isVideoInView = true;
+        } else {
+          this.isVideoInView = false;
+        }
+      });
+    }, options);
+
+    observer.observe(this.videoContainer.nativeElement);
   }
 }
