@@ -13,6 +13,7 @@ import { PagesComponent } from './components/pages/pages.component';
 import { MediaComponent } from './components/media/media.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollfixedComponent } from './components/templates/scrollfixed/scrollfixed.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CoupensComponent,
     PagesComponent,
     MediaComponent,
-    SettingsComponent
+    SettingsComponent,
+    ScrollfixedComponent
   ],
   imports: [
     BrowserModule,
