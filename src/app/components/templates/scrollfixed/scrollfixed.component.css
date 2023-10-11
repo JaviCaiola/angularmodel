@@ -1,0 +1,17 @@
+.medio {
+    display: none;
+    position: relative;
+  }
+  
+  .medio video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .h-400.medio.is-visible video {
+    display: block;
+  }
+  

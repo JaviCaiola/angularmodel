@@ -14,6 +14,8 @@ import { MediaComponent } from './components/media/media.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollfixedComponent } from './components/templates/scrollfixed/scrollfixed.component';
+import { Route1Component } from './components/routes/route1/route1.component';
+import { ScrollComponent } from './components/routes/scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ScrollfixedComponent } from './components/templates/scrollfixed/scrollf
     PagesComponent,
     MediaComponent,
     SettingsComponent,
-    ScrollfixedComponent
+    ScrollfixedComponent,
+    Route1Component,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,
